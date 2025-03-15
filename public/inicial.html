@@ -377,6 +377,7 @@
             <video id="video" width="300" height="200" playsinline></video>
         </div>
         <div class="actions">
+            <button id="payButton" style="display: none;">Pagar Agora</button>
             <button id="scanButton">Scan QR Code</button>
         </div>
     </div>
@@ -586,6 +587,10 @@ function payUser(event) {
         document.getElementById('scanButton').addEventListener('click', function() {
             scanQRCode();
         });
+        document.getElementById('payButton').addEventListener('click', function() {
+        alert('Pagamento realizado com sucesso!'); // Substitua pela lógica de pagamento
+        });
+
 
         function scanQRCode() {
             const video = document.getElementById('video');
@@ -625,6 +630,10 @@ function payUser(event) {
         function displayQRCodePix(data) {
             const qrCodeResult = document.getElementById('qrCodeResult');
             qrCodeResult.textContent = `QR Code Pix detectado: ${data}`;
+
+            const payButton = document.getElementById('payButton');
+            payButton.style.display = 'block'; // Exibe o botão "Pagar Agora"
+
             stopVideoStream();
         }
 
