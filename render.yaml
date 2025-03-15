@@ -1,0 +1,12 @@
+# Exported from Render on 2025-03-15T06:08:21Z
+databases:
+- name: database
+  databaseName: database_zliv
+  user: database_zliv_user
+  plan: free
+  region: oregon
+  ipAllowList:
+  - source: 192.168.0.1/32
+    description: everywhere
+  postgresMajorVersion: "16"
+version: "1"
